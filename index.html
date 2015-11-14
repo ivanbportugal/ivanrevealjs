@@ -108,7 +108,7 @@ module.exports = function(grunt) {
 
 	// Project configuration
 	grunt.initConfig({
-		yeoman: yeomanConfig,
+        yeoman: yeomanConfig,
         sass: {
             options: {
                 sourceMap: true,
@@ -242,7 +242,7 @@ goserver: {
             staticDirs: [yeomanConfig.dist]
         }
     }
-},
+}
 						</code></pre>
 					</section>
 					<section>
@@ -253,32 +253,9 @@ gobuild: {
             dist: '<%= yeoman.dist %>/main'
         }
     }
-},
-goserver: {
-    options: {
-        port: 3000,
-        // Change this to '0.0.0.0' to access the server from outside.
-        hostname: 'localhost'
-    },
-    livereload: {
-        options: {
-            staticDirs: ['.tmp', yeomanConfig.app]
-        }
-    },
-    test: {
-        options: {
-            port: 3001,
-            staticDirs: ['.tmp', 'test']
-        }
-    },
-    dist: {
-        options: {
-            port: 3002,
-            dist: '<%= gobuild.dist.options.dist %>',
-            staticDirs: [yeomanConfig.dist]
-        }
-    }
-},
+}
+
+// ... More to be shown in the demo/Github project
 						</code></pre>
 					</section>
 				</section>
@@ -319,7 +296,7 @@ goserver: {
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-				fragments: false,
+				fragments: true,
 
 				// Optional reveal.js plugins
 				dependencies: [
